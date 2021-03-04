@@ -3,7 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-const button = document.querySelector('.btn')
+const buttons = answerButtonsElement.document.getElementsByClassName('btn')
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -23,9 +23,20 @@ function startGame() {
 }
 
 // Highlights option when button is clicked
-answerButtonsElement.addEventListener('click', ()=> {
-    document.querySelector('.btn').classList.add('picked')
-})
+for (let i = 0; i < buttons.length; i++) {
+  button[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " active";
+  });
+}
+
 
 // Next Question
 function setNextQuestion() {

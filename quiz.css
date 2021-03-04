@@ -18,7 +18,7 @@ body {
   background-color: white;
 }
 
-.picked {
+.active {
     background-color: orange;
 }
 

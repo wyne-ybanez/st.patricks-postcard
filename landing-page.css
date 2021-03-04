@@ -1,0 +1,50 @@
+
+#main-image{
+   background-image: url("./images/street-party.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 700px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+.half-white{
+  height: 700px;
+  width: 50%;
+  background-color: rgba(252, 249, 249, 0.9);
+  float: right;
+  position: relative;
+}
+
+.intro-text{
+    height: 200px;
+    width: 100%;
+}
+.text-image{
+    text-align: center;
+    margin: 30px;
+    
+
+}
+hr:not([size]) {
+    height: 10px;
+}
+
+hr {
+    margin: 0;
+    color: inherit;
+    background-color:rgb(226 184 66);
+    border: 0;
+    opacity:1;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+#main-image h6 {
+color:rgb(88, 88, 97);
+}
+@media screen and (min-800px) {
+
+}

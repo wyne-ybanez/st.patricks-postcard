@@ -3,7 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-const buttons = answerButtonsElement.document.getElementsByClassName('btn')
+const btns = answerButtonsElement.getElementsByClassName('btn')
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -21,22 +21,6 @@ function startGame() {
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
-
-// Highlights option when button is clicked
-for (let i = 0; i < buttons.length; i++) {
-  button[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-
-    // If there's no active class
-    if (current.length > 0) {
-      current[0].className = current[0].className.replace(" active", "");
-    }
-
-    // Add the active class to the current/clicked button
-    this.className += " active";
-  });
-}
-
 
 // Next Question
 function setNextQuestion() {
@@ -56,7 +40,7 @@ function showQuestion(question) {
   })
 }
 
-// Reset when net question is asked
+// Reset when next question is asked
 function resetState() {
   nextButton.classList.add('hide')
   while (answerButtonsElement.firstChild) {
@@ -64,13 +48,30 @@ function resetState() {
   }
 }
 
+// Allows user to choose an answer
 function selectAnswer(e) {
   const selectedButton = e.target
+
+  // Highlights the selected answer
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", ()=>{
+    var current = document.getElementsByClassName("active");
+   // If there's no active class - class changes to nothing
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+   // Add the active class to the current/clicked button
+    this.className += " active";
+    });
+  }
+  
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
+    this.className += " active";
   } else {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
+    this.className += " active";
   }
 }
 

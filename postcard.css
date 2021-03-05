@@ -7,3 +7,14 @@ body{
     padding: 0;
 }
 
+.post-card{
+    width: 500px;
+    height: 350px;
+    background-color: #fafafa;
+    opacity: 0.8;
+    transform:translate(-50%, -50%);
+    position:absolute;
+    padding:12px;
+    left:50%;
+    top:50%;
+}

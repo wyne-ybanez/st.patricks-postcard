@@ -69,13 +69,15 @@ function selectAnswer(e) {
     nextButton.classList.remove('hide')
   } else {
     questionElement.innerText = "Congratulations, you've finished the game!"
-    answerButtonsElement.classList.add('hide')
+
     // This should allow user to submit their results
     submitButton.innerText = 'Submit'
     submitButton.classList.remove('hide')
+
     // Restart Game
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')  
+    setTimeout(()=>{answerButtonsElement.classList.add('hide')}, 1500)
   }
 }
 
@@ -99,7 +101,7 @@ const questions = [
     question: 'Where was St. Patrick born?',
     answers: [
       { text: 'Ireland', correct: false },
-      { text: 'Unknown - somewhere in Britain', correct: true },
+      { text: 'Britain', correct: true },
       { text: 'Wales', correct: false },
       { text: 'Scotland', correct: false }
     ]

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Roboto&display=swap');
 
 body{
     background-size: cover;
@@ -10,7 +10,7 @@ body{
 }
 .post-card{
     width: 500px;
-    height: 350px;
+    height: 370px;
     background-color: #fafafa;
     opacity: 0.8;
     transform:translate(-50%, -50%);
@@ -74,10 +74,12 @@ body{
   float:left;
   word-spacing: 3px;
   padding: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 .content-right{
   width:50%;
   float:left;
   padding: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 

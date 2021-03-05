@@ -56,7 +56,7 @@ function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
-  
+
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
@@ -88,7 +88,7 @@ const questions = [
     question: 'Where was St. Patrick born?',
     answers: [
       { text: 'Ireland', correct: false },
-      { text: 'Britain', correct: true },
+      { text: 'Unknown - somewhere in Britain', correct: true },
       { text: 'Wales', correct: false },
       { text: 'Scotland', correct: false }
     ]
@@ -121,6 +121,7 @@ const questions = [
     ]
   },
   {
+<<<<<<< HEAD
     question: "What kind of snake lived in Ireland during San Patrick time?",
     answers: [
       { text: 'Python', correct: false },
@@ -136,6 +137,14 @@ const questions = [
       { text: 'Brave', correct: false },
       { text: 'Man of wisdom', correct: false },
       { text: 'Nobleman', correct: true }
+=======
+    question: "St.Patrick didn't actually wear green, his main color was blue, what symbolised him as having wore green?",
+    answers: [
+      { text: 'Irish Independence movement', correct: true },
+      { text: 'Boston tea party', correct: false },
+      { text: 'Lughnasa', correct: false },
+      { text: 'Bealtaine', correct: false }
+>>>>>>> 8dfbb0874532d42cd8fe8c091c2ec553206b3a84
     ]
   }
 ]

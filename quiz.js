@@ -24,6 +24,7 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
+  heading.innerText = "Welcome to our St.Patrick's themed quiz"
   setNextQuestion()
 }
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
 body{
     background-size: cover;
     background-position: 0%;
@@ -6,7 +8,6 @@ body{
     margin: 0;   
     padding: 0;
 }
-
 .post-card{
     width: 500px;
     height: 350px;
@@ -18,3 +19,65 @@ body{
     left:50%;
     top:50%;
 }
+.contactForm {
+    background: #000000;
+    padding: 15px;
+    opacity: 0.7;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    width: 190px;
+}
+.contactForm .inputBox {
+    width: 160px;
+}
+.contactForm .submit {
+    margin-top: 2px;  
+    color: #fafafa;
+    background:  #000000;
+}
+.contactForm .inputBox input {
+    width: 100%;
+    padding: 2px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin: 2px 0;
+    border-bottom: 3px solid #000000;
+}
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 2px;
+    font-size: 12px;
+    margin: 2px 0;
+    border-bottom: 1px solid #000000;
+}
+.contactForm .inputBox span {
+    color: #fafafa;
+    font-size: 12px;
+    background-color: #000000;
+}
+.contactForm .submit button.btn:hover {
+    color: #000000;
+}
+.btn.btn-outline-light{
+    margin: 0 40px;
+    font-size: 13px;
+}
+.post-card_title{
+  font-family: 'La Belle Aurore', cursive;
+  padding: 3px;
+}
+.content-left{
+  width:calc(50%);
+  font-size:21px;
+  line-height:1.2;
+  float:left;
+  word-spacing: 3px;
+  padding: 20px;
+}
+.content-right{
+  width:50%;
+  float:left;
+  padding: 20px;
+}
+

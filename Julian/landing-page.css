@@ -42,7 +42,7 @@ hr:not([size]) {
 hr {
     margin: 0;
     color: inherit;
-    background-color:rgb(226 184 66);
+    background-color:rgb(226, 184, 66);
     border: 0;
     opacity:1;
     margin-top: 20px;
@@ -57,7 +57,10 @@ hr {
 #main-image .btn-primary {
     background-color: rgb(40,174,96);
     border-color: rgb(24, 131, 69) ;
-    margin-left:40%
+   
+}
+button{
+    margin-left: 43%;
 }
 /*---------Media landing page-----------*/
 
@@ -83,12 +86,14 @@ hr {
 #main-image{
      height: 360px;
 }
-
+button{
+text-align: center;
+}
 }
 /*---------Footer-----------*/
 #footer{
     display: block;
-    height: 100px;
+    height: 60px;
     width:100%;
     background-color: rgb(40,174,96);
     position:fixed; 
@@ -97,15 +102,21 @@ hr {
 #footer ul{
 text-align: center;
 }
-#footer ul li{
-   
+#footer ul a{
+text-decoration: none;
+color:rgb(252, 251, 249);
+}
+
+#footer ul li {
    list-style-type:none;
    display: inline;
-    font-size: 40px;
-    margin-left: 40px;
+   font-size: 40px;
+   padding: 30px;
+  
 }
 
 /*---------Media Footer -----------*/
 @media screen and (max-width: 800px){
 
 }
+

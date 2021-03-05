@@ -53,7 +53,7 @@ body{
 }
 .contactForm .inputBox span {
     color: #fafafa;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #000000;
 }
 .contactForm .submit button.btn:hover {
@@ -61,7 +61,7 @@ body{
 }
 .btn.btn-outline-light{
     margin: 0 40px;
-    font-size: 13px;
+    font-size: 14px;
 }
 .post-card_title{
   font-family: 'La Belle Aurore', cursive;
@@ -69,8 +69,8 @@ body{
 }
 .content-left{
   width:calc(50%);
-  font-size:21px;
-  line-height:1.2;
+  font-size:18px;
+  line-height:1.8;
   float:left;
   word-spacing: 3px;
   padding: 20px;

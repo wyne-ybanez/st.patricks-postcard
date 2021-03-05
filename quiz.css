@@ -1,12 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+body h1, h2, h3, h4, h5, h6{
+font-family: 'Cabin', sans-serif;
+}
+
+p{
+ font-family: 'abel', sans-serif; 
+}
+
+#main-image{
+   background-image: url("./images/irish.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; 
+}
+
+.half-white{
+  height: 820px;
+  width: 50%;
+  background-color: rgba(252, 249, 249, 0.9);
+  float: right;
+  position: relative;
+}
+
+.mute{
+    text-align: center;
+    margin: 10px 40px 40px 40px;
+}
+
+
+hr:not([size]) {
+    height: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    margin: 0;
+    color: inherit;
+    background-color:rgb(226 184 66);
+    border: 0;
+    opacity:1;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#main-image h6 {
+color:rgb(88, 88, 97);
+}
+
+ #main-image .btn-primary {
+    background-color: rgb(40,174,96);
+    border-color: rgb(24, 131, 69) ;
+    margin-left:47%;
+}
+/* @media screen and (max-width: 800px){
+.half-white{
+  height: 200px;
+  width: 100%;
+  background-color: rgba(252, 252, 252, 1
+  );
+  top: 365px;
+  position: absolute;
+  
+} */
+
+.intro-text{
+    height: 100px;
+    width: 100%;
+}
+
+.text-image{
+    text-align: center;
+    margin: 12rem 40px 10px 40px;
+}
+
+img{
+    left: 50%;
+    height:50%;
+    position: absolute;
+    margin-bottom: 10%;
+}
+
 /* QUIZ CSS. by WYNE  */
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-h1 {
+#heading {
     margin-bottom: 4rem;
-    transform: translateX(6%);
+    margin-top:3rem;
+    text-align: center;
+    justify-content: center;
 }
 
 body {
@@ -15,7 +102,7 @@ body {
   margin: 0;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 300vh;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -83,5 +170,6 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #DFDFDF;
+    overflow-x: hidden;
 }
 

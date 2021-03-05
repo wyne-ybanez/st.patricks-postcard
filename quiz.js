@@ -19,6 +19,7 @@ nextButton.addEventListener('click', () => {
 function startGame() {
   startButton.classList.add('hide')
   submitButton.classList.add('hide')
+  answerButtonsElement.classList.remove('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
@@ -67,7 +68,8 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    questionContainerElement.innerHTML = "<h2 class='text-center justify-content-center align-items-center text-white mb-3'>Congratulations, you've finished the game!</h2>"
+    questionElement.innerText = "Congratulations, you've finished the game!"
+    answerButtonsElement.classList.add('hide')
     // This should allow user to submit their results
     submitButton.innerText = 'Submit'
     submitButton.classList.remove('hide')

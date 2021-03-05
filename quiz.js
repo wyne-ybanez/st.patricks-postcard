@@ -1,5 +1,6 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const submitButton = document.getElementById('submit-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -14,8 +15,10 @@ nextButton.addEventListener('click', () => {
   setNextQuestion()
 })
 
+// Hiding uneccessary buttons
 function startGame() {
   startButton.classList.add('hide')
+  submitButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
@@ -46,6 +49,7 @@ function showQuestion(question) {
 // Reset when next question is asked
 function resetState() {
   nextButton.classList.add('hide')
+  submitButton.classList.add('hide')
   while (answerButtonsElement.firstChild) {
     answerButtonsElement.removeChild(answerButtonsElement.firstChild)
   }
@@ -63,8 +67,13 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
+    questionContainerElement.innerHTML = "<h2 class='text-center justify-content-center align-items-center text-white mb-3'>Congratulations, you've finished the game!</h2>"
+    // This should allow user to submit their results
+    submitButton.innerText = 'Submit'
+    submitButton.classList.remove('hide')
+    // Restart Game
     startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+    startButton.classList.remove('hide')  
   }
 }
 

@@ -1,9 +1,12 @@
-
-
 /* QUIZ CSS. by WYNE  */
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 4rem;
+    transform: translateX(6%);
 }
 
 body {
@@ -46,7 +49,7 @@ body {
   background-color:orange;
 }
 
-.start-btn, .next-btn {
+.start-btn, .next-btn, .submit-btn {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
@@ -71,7 +74,7 @@ body {
 }
 
 /* Background Styles Only */
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 html {
     width: 100%;

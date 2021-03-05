@@ -15,29 +15,36 @@
     <title>St. Patrick's Day Post Card</title>
 </head>
 <body>
-<section>
-    
-</section>
+    <div class="row">
     <!-- Container for Quiz -->
-    <div class="container">
 
-            <!-- Multiple Answers -->
-        <div id="question-container" class="hide">
-            <div id="question" class="text-white">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+    <div class="col-12">
+
+            <div class="col-12">
+                <h1>Welcome to our St.Patrick's themed quiz</h1>
+            </div>
+
+        <div class="container">
+                <!-- Multiple Answers -->
+            <div id="question-container" class="hide">
+                <div id="question" class="text-white h4">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn bold">Answer 1</button>
+                    <button class="btn bold">Answer 2</button>
+                    <button class="btn bold">Answer 3</button>
+                    <button class="btn bold">Answer 4</button>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start</button>
+                <button id="next-btn" class="next-btn btn hide">Next</button>
+                <button id="submit-btn" class="submit-btn btn hide">Submit</button>
             </div>
         </div>
-
-        <!-- Action Buttons -->
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
-        </div>
     </div>
+</div>
     
     <!-- JS Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

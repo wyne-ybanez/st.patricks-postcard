@@ -19,10 +19,10 @@ The theme for the Hackathon March 2021 is St Patrick's day.
 We have decided to create a quiz game with fun facts regarding St Patrick's Day. The idea is to propose to the user some questions, if the questions are answered all correctly the user will get a post card rapresenting St Patrick's Day celebration.
 
 ## **_User Story_**
-As a User I want to be able to answer the questions and discover fun facts regarding St Patrick's Day.
-As a User I want to be able to answer the questions and collect postcards.
-As a User I want to be able to come back and play again with the quiz.
-As a User I want to be able to be able to play with friends and family.
+As a User I want to be able to answer the questions and discover fun facts regarding St Patrick's Day.  
+As a User I want to be able to answer the questions and collect postcards.  
+As a User I want to be able to come back and play again with the quiz.  
+As a User I want to be able to be able to play with friends and family.  
 
 
 ## **_Technology Used_**

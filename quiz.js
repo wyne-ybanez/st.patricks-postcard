@@ -56,7 +56,7 @@ function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
-  
+
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
@@ -88,7 +88,7 @@ const questions = [
     question: 'Where was St. Patrick born?',
     answers: [
       { text: 'Ireland', correct: false },
-      { text: 'Britain', correct: true },
+      { text: 'Unknown - somewhere in Britain', correct: true },
       { text: 'Wales', correct: false },
       { text: 'Scotland', correct: false }
     ]
@@ -121,12 +121,12 @@ const questions = [
     ]
   },
   {
-    question: "What was St.Patrick's original name (name at birth)?",
+    question: "St.Patrick didn't actually wear green, his main color was blue, what symbolised him as having wore green?",
     answers: [
-      { text: 'Robert Scitte', correct: false },
-      { text: 'Patricae Fulton', correct: false },
-      { text: 'Patricious Eastaughffe', correct: false },
-      { text: 'Maewyn Succat', correct: true }
+      { text: 'Irish Independence movement', correct: true },
+      { text: 'Boston tea party', correct: false },
+      { text: 'Lughnasa', correct: false },
+      { text: 'Bealtaine', correct: false }
     ]
   }
 ]

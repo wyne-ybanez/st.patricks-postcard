@@ -11,19 +11,37 @@
     <style class="hero-image">
         body{background-image: url(images/form-img.jpg)}
     </style>
+    <script src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 </head>
 <body>
 <div class="post-card">
   <div class="post-stample">
   </div>
-  <h1 class="post-card__title">Happy St. Patrick's Day!</h1>
+  <h1 class="post-card_title">Happy St. Patrick's Day!</h1>
   <div class="content-left">
     May you be blessed with a pot of gold that offers you happiness, prosperity and luck!
   </div>  
   <div class="content-right">
-    <span class="adress-line">Name</span>
-    <span class="adress-line">Address</span>
-    <span class="adress-line">Country</span>
+    <div class="contactForm">
+        <form onsubmit="return sendMail(this);">
+            <div class="inputBox">
+                <span>Full Name</span>
+                    <input type="text" name="name" placeholder="Name" required="required">
+            </div>
+            <div class="inputBox">
+                <span>Email</span>
+                    <input type="email" name="email" placeholder="E-mail" required="required">
+            </div>
+            <div class="inputBox">
+                <span>Message</span>
+                    <textarea  name="projectsummary" placeholder="Type your message" required="required"></textarea>
+            </div>
+            <div class="submit">
+                <button type="submit" value="send" class="btn btn-outline-light">SUBMIT</button>
+            </div>
+        </form>
+    </div>
   </div>
 </div>
 </body>

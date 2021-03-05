@@ -121,12 +121,21 @@ const questions = [
     ]
   },
   {
-    question: "What was St.Patrick's original name (name at birth)?",
+    question: "What kind of snake lived in Ireland during San Patrick time?",
     answers: [
-      { text: 'Robert Scitte', correct: false },
-      { text: 'Patricae Fulton', correct: false },
-      { text: 'Patricious Eastaughffe', correct: false },
-      { text: 'Maewyn Succat', correct: true }
+      { text: 'Python', correct: false },
+      { text: 'Viper', correct: false },
+      { text: 'Anaconda', correct: false },
+      { text: 'None', correct: true }
+    ]
+  },
+  {
+    question: "What does Patrick mean?",
+    answers: [
+      { text: 'Young', correct: false },
+      { text: 'Brave', correct: false },
+      { text: 'Man of wisdom', correct: false },
+      { text: 'Nobleman', correct: true }
     ]
   }
 ]

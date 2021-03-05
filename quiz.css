@@ -18,10 +18,6 @@ body {
   background-color: white;
 }
 
-.active {
-    background-color: orange;
-}
-
 .container {
   width: 800px;
   max-width: 80%;
@@ -56,6 +52,14 @@ body {
   padding: 10px 20px;
 }
 
+.btn.correct {
+    background-color: orange;
+}
+
+.btn.wrong {
+    background-color: green;
+}
+
 .controls {
   display: flex;
   justify-content: center;
@@ -78,42 +82,3 @@ html {
     background-color: #DFDFDF;
 }
 
-.side-links {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.side-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: white;
-  width: 180px;
-  padding: 10px 0;
-  border-radius: 10px;
-}
-
-.side-link-youtube {
-  background-color: red;
-}
-
-.side-link-twitter {
-  background-color: #1DA1F2;
-}
-
-.side-link-github {
-  background-color: #6e5494;
-}
-
-.side-link-text {
-  margin-left: 10px;
-  font-size: 18px;
-}
-
-.side-link-icon {
-  color: white;
-  font-size: 30px;
-} 

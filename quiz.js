@@ -5,6 +5,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const btns = answerButtonsElement.getElementsByClassName('btn')
+const heading = document.getElementById('heading')
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -68,7 +69,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-    questionElement.innerText = "Congratulations, you've finished the game!"
+    heading.innerText = "Congratulations, you've finished the game!"
 
     // This should allow user to submit their results
     submitButton.innerText = 'Submit'
@@ -77,7 +78,6 @@ function selectAnswer(e) {
     // Restart Game
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')  
-    setTimeout(()=>{answerButtonsElement.classList.add('hide')}, 1500)
   }
 }
 
@@ -87,7 +87,6 @@ function setStatusClass(element, correct) {
     element.classList.add('correct')
   } else {
     element.classList.add('wrong')
-    btns.innerText = 'Wrong'
   }
 }
 

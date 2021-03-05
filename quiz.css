@@ -130,6 +130,7 @@ body {
   padding: 5px 10px;
   color: white;
   outline: none;
+  font-weight: bold;
 }
 
 .btn:hover {

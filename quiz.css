@@ -50,7 +50,7 @@ hr {
 color:rgb(88, 88, 97);
 }
 
- #main-image .btn-primary {
+#main-image .btn-primary {
     background-color: rgb(40,174,96);
     border-color: rgb(24, 131, 69) ;
     margin-left:47%;
@@ -96,13 +96,19 @@ img{
     justify-content: center;
 }
 
+#score {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
   color: black;
   padding: 0;
   margin: 0;
   display: flex;
   width: 100vw;
-  height: 300vh;
+  height: 310vh;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -130,7 +136,7 @@ body {
   padding: 5px 10px;
   color: white;
   outline: none;
-  font-weight: bold;
+  font-size: 25px;
 }
 
 .btn:hover {

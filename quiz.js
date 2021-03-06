@@ -34,6 +34,19 @@ function startGame() {
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
+  resetHeading()
+}
+
+// Changes heading randomly - for a more fun experience
+function resetHeading() {
+    headingOptions = [ "Let's see if you get this one right ;)",
+                        "You got this one in the bag!",
+                        "Easy work, you got this!",
+                        "A guess is better than giving no answer",
+                        "It might be tempting to Google the answer..."]
+
+    let random = Math.floor(Math.random() * headingOptions.length)
+    heading.innerText = headingOptions[random]
 }
 
 // Shows next question
@@ -46,15 +59,26 @@ function showQuestion(question) {
     button.innerText = answer.text
     button.classList.add('btn')
 
-    // If answer is correct, meaning true - set dataset to 'true'
+    // If answer is correct, meaning true - set dataset to value 'true' 
+    // If value is 'true' - Increase score by 1
     if (answer.correct) {
       button.dataset.correct = answer.correct
-
-      // If correct answer clicked - increase score
       button.addEventListener('click',()=>{
         if (button.dataset.correct){
+            heading.innerText = "Well Done!"
             score++
+            document.getElementById('scoreCounter').innerText = `Score: ${score}` 
             console.log(score)
+        }
+      })
+    } 
+
+    // If wrong answer is clicked - change heading
+    if (answer.wrong) {
+      button.dataset.wrong = answer.wrong
+      button.addEventListener('click',()=>{
+        if (button.dataset.wrong){
+            heading.innerText = "Wrong!"
         }
       })
     } 
@@ -153,7 +177,7 @@ const questions = [
     ]
   },
   {
-    question: "What kind of snake lived in Ireland during San Patrick time?",
+    question: "What kind of snake lived in Ireland during St.Patrick's time?",
     answers: [
       { text: 'Python', correct: false, wrong: true },
       { text: 'Viper', correct: false, wrong: true },

@@ -36,7 +36,7 @@ is a style sheet language. It is used to style markup language such as HTML.
 3. [Gitpod](https://gitpod.io/) has been used as an on-line IDE followed by [Github](https://github.com/) for deployment. IDE is a software application used by computer programmers for software development.
 
 
-5. [Bootstrap4](https://getbootstrap.com/) has been used to achive mobile first design and to achive a structured layout. Version number 4.4.1.
+5. [Bootstrap](https://getbootstrap.com/) has been used to achive mobile first design and to achive a structured layout. 
 
 
 7. [JavaScript](https://www.javascript.com/) has been used to be able to display and add the following functionality: Google Maps, email service in contact page, slide show in gallery page.

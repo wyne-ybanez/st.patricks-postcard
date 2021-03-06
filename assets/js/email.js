@@ -5,5 +5,5 @@ function sendMail(contactForm) {
         "more_info": contactForm.message.value,
         
     })
-    .then(alert(`Thank you! Your message was sent`));
+    .then(alert(`Thank you! Happy St. Patrick Day!`));
 }

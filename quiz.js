@@ -7,7 +7,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const btns = answerButtonsElement.getElementsByClassName('btn')
 const heading = document.getElementById('heading')
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex, score
 
 // Starts Game when clicking
 startButton.addEventListener('click', startGame)
@@ -23,6 +23,8 @@ function startGame() {
   answerButtonsElement.classList.remove('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
+  score = 0
+  console.clear()
   questionContainerElement.classList.remove('hide')
   heading.innerText = "Welcome to our St.Patrick's themed quiz"
   setNextQuestion()
@@ -38,12 +40,24 @@ function setNextQuestion() {
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
+
+    // Create button for each answer
     const button = document.createElement('button')
     button.innerText = answer.text
     button.classList.add('btn')
+
+    // If answer is correct, meaning true - set dataset to 'true'
     if (answer.correct) {
       button.dataset.correct = answer.correct
-    }
+
+      // If correct answer clicked - increase score
+      button.addEventListener('click',()=>{
+        if (button.dataset.correct){
+            score++
+            console.log(score)
+        }
+      })
+    } 
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
   })
@@ -62,8 +76,9 @@ function resetState() {
 function selectAnswer(e) {
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
-  setStatusClass(document.body, correct)
+  const wrong = selectedButton.dataset.wrong
 
+  // Show correct answer
   Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
@@ -85,6 +100,8 @@ function selectAnswer(e) {
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
+
+  // Count Correct Answers and add style
   if (correct) {
     element.classList.add('correct')
   } else {
@@ -97,59 +114,60 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
+// Questions
 const questions = [
   {
     question: 'Where was St. Patrick born?',
     answers: [
-      { text: 'Ireland', correct: false },
-      { text: 'Britain', correct: true },
-      { text: 'Wales', correct: false },
-      { text: 'Scotland', correct: false }
+      { text: 'Ireland', correct: false, wrong: true },
+      { text: 'Britain', correct: true, wrong: false },
+      { text: 'Wales', correct: false, wrong: true },
+      { text: 'Scotland', correct: false, wrong: true }
     ]
   },
   {
     question: "In the 1600s the first St.Patrick's day celebrated - but where was it held?",
     answers: [
-      { text: 'St. Augustine, Florida', correct: true },
-      { text: 'Boston', correct: false },
-      { text: 'New York City', correct: false },
-      { text: 'Dublin', correct: false }
+      { text: 'St. Augustine, Florida', correct: true, wrong: false },
+      { text: 'Boston', correct: false, wrong: true },
+      { text: 'New York City', correct: false, wrong: true },
+      { text: 'Dublin', correct: false, wrong: true }
     ]
   },
   {
     question: 'What plant or leaf did St.Patrick use as a metaphor for Christianity?',
     answers: [
-      { text: 'Neem', correct: false },
-      { text: 'Maple Leaf', correct: false },
-      { text: 'Shamrock', correct: true },
-      { text: 'Oxalis', correct: false }
+      { text: 'Neem', correct: false, wrong: true },
+      { text: 'Maple Leaf', correct: false, wrong: true },
+      { text: 'Shamrock', correct: true, wrong: false },
+      { text: 'Oxalis', correct: false, wrong: true }
     ]
   },
   {
     question: "What was St.Patrick's original name (name at birth)?",
     answers: [
-      { text: 'Robert Scitte', correct: false },
-      { text: 'Patricae Fulton', correct: false },
-      { text: 'Patricious Eastaughffe', correct: false },
-      { text: 'Maewyn Succat', correct: true }
+      { text: 'Robert Scitte', correct: false, wrong: true },
+      { text: 'Patricae Fulton', correct: false, wrong: true },
+      { text: 'Patricious Eastaughffe', correct: false, wrong: true },
+      { text: 'Maewyn Succat', correct: true, wrong: false }
     ]
   },
   {
     question: "What kind of snake lived in Ireland during San Patrick time?",
     answers: [
-      { text: 'Python', correct: false },
-      { text: 'Viper', correct: false },
-      { text: 'Anaconda', correct: false },
-      { text: 'None', correct: true }
+      { text: 'Python', correct: false, wrong: true },
+      { text: 'Viper', correct: false, wrong: true },
+      { text: 'Anaconda', correct: false, wrong: true },
+      { text: 'None', correct: true, wrong: false }
     ]
   },
   {
     question: "What does Patrick mean?",
     answers: [
-      { text: 'Young', correct: false },
-      { text: 'Brave', correct: false },
-      { text: 'Man of wisdom', correct: false },
-      { text: 'Nobleman', correct: true }
+      { text: 'Young', correct: false, wrong: true },
+      { text: 'Brave', correct: false, wrong: true },
+      { text: 'Man of wisdom', correct: false, wrong: true },
+      { text: 'Nobleman', correct: true, wrong: false }
     ]
   }
 ]

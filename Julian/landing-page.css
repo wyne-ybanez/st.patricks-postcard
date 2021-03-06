@@ -102,6 +102,7 @@ text-align: center;
 #footer ul{
 text-align: center;
 padding-left: 0px;
+padding-top: 5px
 }
 #footer ul a{
 text-decoration: none;
@@ -113,11 +114,20 @@ color:rgb(252, 251, 249);
    display: inline;
    font-size: 35px;
    padding: 30px;
+   padding-top: 10px
   
 }
 
 /*---------Media Footer -----------*/
-@media screen and (max-width: 800px){
+@media screen and (max-width: 300px){
+#footer ul li{
+    font-size: 25px;
+}
+#footer ul{
+text-align: center;
+padding-left: 0px;
+padding-top: 10px;
 
+}
 }
 

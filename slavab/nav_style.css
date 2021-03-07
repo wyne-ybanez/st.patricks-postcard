@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+
+
 .header {
     position: fixed;
     top: 0;
@@ -246,14 +248,17 @@ input[type=checkbox]:focus {
     background-size: cover;
     width: 100%;
     height: 100vh;
+    position: relative;
+    overflow-y: hidden;
 }
 
 .half-white {
     height: 100%;
     width: 50%;
     background-color: rgba(252, 249, 249, 0.9);
-    float: right;
-    position: relative;
+    right: 0;
+    top: 0;
+    position: absolute;
 }
 
 .text-image {
@@ -313,36 +318,38 @@ hr {
 .btn:focus {
     background-color: #fff;
     color: #E56317;
-    outline: none;
     border: 2px solid rgba(229, 99, 23, 1);
+    box-shadow: none;
 }
 
 
 /*---------Media landing page-----------*/
 
-@media(max-width: 767px) {
+@media only screen and (max-width: 768px) and (max-width:924px) {
+    
     .hero {
         padding-top: 60px;
     }
 
     .mute {
         margin: 20px;
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .half-white {
-        height: 50%;
+        height: 40%;
         width: 100%;
         background-color: rgba(252, 249, 249, 0.9);
-        top: 365px;
+        top: 396px;
         position: absolute;
         clear: both;
+        overflow: hidden;
     }
 
     .text-image {
         text-align: center;
-        margin: 20px;
-        font-size: 20px;
+        margin: 25px;
+        font-size: 30px;
         font-weight: 700;
 
     }
@@ -353,14 +360,101 @@ hr {
 
     #main-image {
         height: 100vh;
+        background-position: top center;
     }
     .btn {
-        margin-bottom: 10px;
+        margin: 20px auto;
+        line-height: 2;
+        font-size: 18px;
 
     }
 }
 
-@media(min-width:370px) and(max-width:600px) {
+@media only screen and (min-width:768px) and (max-width:1024px)   {
+    
+    .half-white {
+        max-height: 50%;
+        width: 100%;
+        background-color: rgba(252, 249, 249, 0.9);
+        top: 409px;
+        position: absolute;
+        clear: both;
+    }
+    
+    .mute {
+        margin: 15px;
+        font-size: 15px;
+    }
+
+    .text-image {
+        text-align: center;
+        margin: 20px 15px;
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+
+    #main-image {
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .btn {
+        margin: 10px auto;
+        line-height: 1;
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (min-width:600px) and (max-width:767px)   {
+    
+    .half-white {
+        max-height: 50%;
+        width: 100%;
+        background-color: rgba(252, 249, 249, 0.9);
+        top: 409px;
+        position: absolute;
+        clear: both;
+    }
+    
+    .mute {
+        margin: 15px;
+        font-size: 15px;
+    }
+
+    .text-image {
+        text-align: center;
+        margin: 20px 15px;
+        font-size: 23px;
+        font-weight: 700;
+    }
+
+
+    #main-image {
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .btn {
+        margin: 10px auto;
+        line-height: 1;
+        font-size: 15px;
+        
+
+    }
+
+}
+
+@media only screen and (max-width:600px) {
+    
+    .half-white {
+        max-height: 40%;
+        width: 100%;
+        background-color: rgba(252, 249, 249, 0.9);
+        top: 404px;
+        position: absolute;
+        clear: both;
+    }
+    
     .mute {
         margin: 15px;
         font-size: 12px;
@@ -368,17 +462,21 @@ hr {
 
     .text-image {
         text-align: center;
-        margin: 15px;
-        font-size: 15px;
+        margin: 20px 15px;
+        font-size: 20px;
         font-weight: 700;
     }
 
 
     #main-image {
         height: 100vh;
+        overflow-x: hidden;
     }
     .btn {
-        margin-bottom: 10px;
+        margin: 10px auto;
+        line-height: 1;
+        font-size: 15px;
+        
 
     }
 
@@ -411,13 +509,15 @@ hr {
     height: auto;
 }
 
-@media(max-width:767px) {
+@media(max-width:924px) {
+    #about_sec {
+    margin-top: 2rem;
+}
     .block {
         margin: 10px 0;
     }
 
 }
-
 
 /*---------Footer-----------*/
 #footer {
@@ -481,6 +581,7 @@ hr {
 .paddy_green {
     background-color: rgba(0, 154, 68, 1);
     color: #fff;
+    transition: all 0.2s ease;
 
 }
 
@@ -501,5 +602,11 @@ hr {
 }
 
 .paddy_green hr {
+    background-color: rgba(0, 154, 68, 1);
+}
+
+.paddy_green .burger::before,
+.paddy_green .burger::after,
+.paddy_green .burger span {
     background-color: rgba(0, 154, 68, 1);
 }

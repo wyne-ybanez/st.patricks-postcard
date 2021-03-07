@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Roboto&display=swap');
 
+html {
+    height: 117vh;
+}
+
 body{
     background-size: cover;
     background-position: 0%;
@@ -8,16 +12,22 @@ body{
     margin: 0;   
     padding: 0;
 }
+.btns {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .post-card{
-    width: 385px;
-    height: 590px;
+    width: 500px;
+    height: 680px;
     background-color: #fafafa;
     opacity: 0.8;
     transform:translate(-50%, -50%);
     position:absolute;
     padding:12px;
     left:50%;
-    top:50%;
+    top:58%;
     border-radius: 2%;
 }
 .contactForm {
@@ -27,7 +37,7 @@ body{
     border-radius: 5px;
     display: block;
     margin: auto;
-    width: 320px;
+    width: 430px;
 }
 .contactForm .inputBox {
     width: 290px;
@@ -35,10 +45,9 @@ body{
 .contactForm .submit {
     margin-top: 10px;  
     color: #fafafa;
-    background:  #000000;
 }
 .contactForm .inputBox input {
-    width: 100%;
+    width: 137%;
     padding: 10px;
     letter-spacing: 2px;
     font-size: 18px;
@@ -46,7 +55,7 @@ body{
     border-bottom: 3px solid #000000;
 }
 .contactForm .inputBox textarea {
-    width: 100%;
+    width: 137%;
     padding: 10px;
     font-size: 18px;
     margin: 5px 0;

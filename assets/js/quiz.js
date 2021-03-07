@@ -18,13 +18,6 @@ nextButton.addEventListener('click', () => {
   setNextQuestion()
 })
 
-// Reset score when game starts and PostCard
-startButton.addEventListener('click',()=>{
-    scoreCounter.innerText = null
-    localStorage.clear()
-    resetPostCard()
-})
-
 // Hiding uneccessary buttons
 function startGame() {
   startButton.classList.add('hide')
@@ -33,10 +26,16 @@ function startGame() {
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   score = 0
+  scoreCounter.innerText = null
   console.clear()
   questionContainerElement.classList.remove('hide')
   heading.innerText = "Welcome to our St.Patrick's themed quiz"
   setNextQuestion()
+
+  if (!postCard.classList.contains('hide')){
+      // Reset game
+    resetPostCard()
+  }
 }
 
 // Next Question
@@ -150,32 +149,32 @@ function clearStatusClass(element) {
 
 // Shows Image Card based on score
 function showCard(){
-    if(score == 0){
+    if(score === 0){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Unfortunately, you didn't score any points, thank you for trying though! Here's a postcard"
         postCard.classList.add('postCard-1')
-    } else if(score == 1){
+    } else if(score === 1){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-1')
-    } else if(score == 2){
+    } else if(score === 2){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-2')
-    } else if(score == 3){
+    } else if(score === 3){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-3')
-    } else if(score == 4){
+    } else if(score === 4){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-4')
-    } else if(score == 5){
+    } else if(score === 5){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
@@ -195,6 +194,8 @@ submitButton.addEventListener('click',showCard)
 function resetPostCard(){
     postCard.classList.add('hide')
     postCardHeading.classList.add('hide')
+    localStorage.clear()
+    alert("Restarting...")
 }
 
 // Questions

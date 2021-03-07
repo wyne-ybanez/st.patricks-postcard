@@ -7,7 +7,6 @@
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="postcard.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <title>Postcard Form</title>
     <style class="hero-image">
         body {
@@ -28,16 +27,23 @@
             <div class="contactForm">
                 <form id="contact-form" onsubmit="return sendMail(this);">
                     <div class="inputBox">
-                        <span>Full Name</span>
-                        <input type="text" id="name" name="name" placeholder="Name" required="required">
+                        <span>Your Name:</span>
+                        <input type="text" id="Name" name="name" placeholder="Name" required="required">
                     </div>
                     <div class="inputBox">
-                        <span>Email</span>
-                        <input type="email" id="exampleInputEmail1" name="emailaddress" placeholder="E-mail" required="required">
+                        <span>To Name:</span>
+                        <input type="text" id="Recipient" name="name" placeholder="To:" required="required">
                     </div>
                     <div class="inputBox">
-                        <span>Message</span>
-                        <textarea name="message" id="exampleInputSubject1" placeholder="Type your message" required="required"></textarea>
+                        <span>Recipient's Email:</span>
+                        <input type="email" id="Email" name="emailaddress" placeholder="E-mail" required="required">
+                    </div>
+                    <div class="inputBox">
+                        <span>Message:</span>
+                        <textarea name="message" id="Message" placeholder="Type your message" required="required"></textarea>
+                    </div>
+                    <div class="reset">
+                        <button type="button" value="reset" class="btn btn-outline-light">RESET</button>
                     </div>
                     <div class="submit">
                         <button type="submit" value="send" class="btn btn-outline-light">SUBMIT</button>
@@ -49,11 +55,13 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 <script src="assets/js/email.js"></script>
-<script>
+<script type="text/javascript">
     (function(){
-        emailjs.init("user_M1g6gtr6UnTLcQUBonRhH");
+        emailjs.init("user_mmIn9UYvw5UvXez2mEzwL");
     })();
-</script>
+ </script>
+
 </body>
 </html>

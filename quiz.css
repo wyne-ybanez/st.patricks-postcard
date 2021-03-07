@@ -24,7 +24,7 @@ body {
   margin: 0;
   display: flex;
   width: 100vw;
-  height: 310vh;
+  height: 200vh;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -81,6 +81,43 @@ body {
 
 .hide {
   display: none;
+}
+
+.postCard-1 {
+    background-image: url('images/card-1.jpg');
+    width: 200px;
+    height: 200px;
+    transition: ease;
+}
+.postCard-2 {
+    background-image: url('images/card-2.jpg');
+    width: 200px;
+    height: 200px;
+    transition: ease;
+}
+.postCard-3 {
+    background-image: url('images/card-3.jpg');
+    width: 200px;
+    height: 200px;
+    transition: ease;
+}
+.postCard-4 {
+    background-image: url('images/card-4.jpg');
+    width: 200px;
+    height: 200px;
+    transition: ease;
+}
+.postCard-5 {
+    background-image: url('images/card-5.jpg');
+    width: 200px;
+    height: 200px;
+    transition: ease;
+}
+.postCard-6 {
+    background-image: url('images/card-6.jpg');
+    width: 200px;
+    height: 200px;
+    transition: ease;
 }
 
 /* Background Styles Only */

@@ -32,6 +32,7 @@ function sendMail() {
   return false
 }
 
+// Reset Button 
 function reset(){
   let inputs = [
     document.getElementById('Name'),

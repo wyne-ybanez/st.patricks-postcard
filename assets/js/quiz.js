@@ -7,8 +7,9 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const btns = answerButtonsElement.getElementsByClassName('btn')
 const heading = document.getElementById('heading')
 const scoreCounter = document.getElementById('scoreCounter')
+const postCard = document.getElementById('postCard')
 
-let shuffledQuestions, currentQuestionIndex, score
+let shuffledQuestions, currentQuestionIndex
 
 // Starts Game when clicking
 startButton.addEventListener('click', startGame)
@@ -143,6 +144,43 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
+
+// Shows Image Card based on score
+function showCard(scoreCounter){
+    if(score == 0){
+        postCard.classList.remove('hide')
+        postCard.innerText = "Unfortunately, you didn't score any points, thank you for trying though! Here's a postcard"
+        postCard.classList.add('postCard-1')
+    } else if(score == 1){
+        postCard.classList.remove('hide')
+        postCard.innerText = "Thank you for playing! Here's your postcard"
+        postCard.classList.add('postCard-1')
+    } else if(score== 2){
+        postCard.classList.remove('hide')
+        postCard.innerText = "Thank you for playing! Here's your postcard"
+        postCard.classList.add('postCard-2')
+    } else if(score == 3){
+        postCard.classList.remove('hide')
+        postCard.innerText = "Thank you for playing! Here's your postcard"
+        postCard.classList.add('postCard-3')
+    } else if(score == 4){
+        postCard.classList.remove('hide')
+        postCard.innerText = "Thank you for playing! Here's your postcard"
+        postCard.classList.add('postCard-4')
+    } else if(score == 5){
+        postCard.classList.remove('hide')
+        postCard.innerText = "Thank you for playing! Here's your postcard"
+        postCard.classList.add('postCard-5')
+    } else {
+        postCard.classList.remove('hide')
+        postCard.innerText = "Thank you for playing! Here's your postcard"
+        postCard.classList.add('postCard-6')
+    }
+}
+
+// When user submits - page expands & shows postcard
+submitButton.addEventListener('click',showCard)
+
 
 // Questions
 const questions = [

@@ -12,6 +12,24 @@ body{
     margin: 0;   
     padding: 0;
 }
+.postCard-1 {
+    background-image: url('./images/card-1.jpg')
+}
+.postCard-2 {
+    background-image: url('./images/card-2.jpg')
+}
+.postCard-3 {
+    background-image: url('./images/card-3.jpg')
+}
+.postCard-4 {
+    background-image: url('./images/card-4.jpg')
+}
+.postCard-5 {
+    background-image: url('./images/card-5.jpg')
+}
+.postCard-6 {
+    background-image: url('./images/card-6.jpg')
+}
 .btns {
     display: flex;
     text-align: center;

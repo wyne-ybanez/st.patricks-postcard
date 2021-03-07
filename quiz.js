@@ -6,6 +6,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const btns = answerButtonsElement.getElementsByClassName('btn')
 const heading = document.getElementById('heading')
+const scoreCounter = document.getElementById('scoreCounter')
 
 let shuffledQuestions, currentQuestionIndex, score
 
@@ -14,6 +15,11 @@ startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
+})
+
+// Reset score when game starts
+startButton.addEventListener('click',()=>{
+    scoreCounter.innerText = null
 })
 
 // Hiding uneccessary buttons

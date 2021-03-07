@@ -6,16 +6,19 @@
 }
 
 #heading {
-    margin-bottom: 4rem;
-    margin-top:3rem;
+    margin-top: 40rem;
     text-align: center;
     justify-content: center;
 }
 
-#score {
+#score, #postCard-Heading {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+#postCard-Heading {
+    padding: 2rem 10rem;
 }
 
 body {
@@ -24,7 +27,7 @@ body {
   margin: 0;
   display: flex;
   width: 100vw;
-  height: 200vh;
+  height: 300vh;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -85,39 +88,82 @@ body {
 
 .postCard-1 {
     background-image: url('images/card-1.jpg');
-    width: 200px;
-    height: 200px;
-    transition: ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px; 
+    width: 720px;
+    transition: ease-in;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 .postCard-2 {
     background-image: url('images/card-2.jpg');
-    width: 200px;
-    height: 200px;
-    transition: ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px; 
+    width: 720px;
+    transition: ease-in;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 .postCard-3 {
     background-image: url('images/card-3.jpg');
-    width: 200px;
-    height: 200px;
-    transition: ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px; 
+    width: 720px;
+    transition: ease-in;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 .postCard-4 {
     background-image: url('images/card-4.jpg');
-    width: 200px;
-    height: 200px;
-    transition: ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px; 
+    width: 720px;
+    transition: ease-in;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 .postCard-5 {
     background-image: url('images/card-5.jpg');
-    width: 200px;
-    height: 200px;
-    transition: ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px; 
+    width: 720px;
+    transition: ease-in;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 .postCard-6 {
     background-image: url('images/card-6.jpg');
-    width: 200px;
-    height: 200px;
-    transition: ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px; 
+    width: 720px;
+    transition: ease-in;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 /* Background Styles Only */

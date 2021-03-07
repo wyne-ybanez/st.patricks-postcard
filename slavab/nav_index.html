@@ -1,105 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-   <!-- Boostrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta
+        http-equiv="X-UA-Compatible" content="IE=Edge">
+        <!-- Boostrap CDN -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- Bootstrap Font-Awesome CDN -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">   
-    <!-- Stylesheet -->
-    <link href="nav_style.css" rel="stylesheet">
-    <title>St. Patricks Day Post Card</title>
-</head>
-<body>
-    
-    <header class="header">
-        <div class="container">
-        <div class="header-body">
-                <div class="pmode-btn">
-                    <input type="checkbox" class="toggle" onclick="paddyLight()" id="checkBox">
-                </div>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link
+        rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+        <!-- Stylesheet -->
+        <link href="nav_style.css" rel="stylesheet">
+        <title>St. Patricks Day Post Card</title>
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="container">
+                <div class="header-body">
+                    <div class="pmode-btn">
+                        <input type="checkbox" class="toggle" onclick="paddyLight()" id="checkBox">
+                    </div>
                     <a class="logo" href="nav_index.html">
                         <img src="img/shamrock-logo.jpg" alt="logo">
                     </a>
-                <div class="burger">
-                    <span></span>
-                </div>
-                <nav class="menu">
-                    <ul class="menu-list">
-                        <li class="menu-item">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">About</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#">Quiz</a>
-                        </li>
-                        
-                    </ul>
-                </nav>
-            
-        </div>
-        </div>
-    </header>
-    <section>
-        <div class="hero container">
-            <h2 class="section-heading"> hero</h2>
-        </div>
-    </section>
-        <section>
-        <div class="container">
-            <div class="about">
-                <h2 class="section-heading">about st.patricks day</h2>
-            <div class="row block">
-                <div class="col-12 col-md-6">
-                    <p class="section-text">
-                       Today's <a class="about-link" href="https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day">Saint Patrick's Day</a>  celebrations have been greatly influenced by those that developed among the Irish diaspora, especially in North America. Until the late 20th century, Saint Patrick's Day was often a bigger celebration among the diaspora than it was in Ireland.
-                       <br><br> Celebrations generally involve public parades and festivals, Irish traditional music sessions (céilithe), and the wearing of green attire or shamrocks. There are also formal gatherings such as banquets and dances, although these were more common in the past.
-                        
-                    </p>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="paddy_img">
-                      <img src="img/party.jpg">  
-                        </div>
+                    <div class="burger">
+                        <span></span>
                     </div>
-                        
-                
+                    <nav class="menu">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">About</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Quiz</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
+                </div>
             </div>
-            </div>
+        </header>
+        <!---------Landing page----------->
+        <div class="hero">
+
+            <section id="main-image">
+                <div class="half-white">
+                    <h1 class="text-image">Did you know that Saint Patrick is one the biggest Parties celebrated around the world?
+                        </h1>
+                        <hr>
+                    <p class="mute">That was easy! <br> But how much do you really know about this big celebration?<br>
+                        try your knowledge  and gain a nice postal!
+                    </p>
+                    <a href="#" role="button" class="btn">Quizz</a>
+                    
+                </div>
+                <!--------- End landing page----------->
+
+            </section>
+        </div>
+        <section id="about_sec">
+            <div class="container">
+                <div class="about">
+                    <h2 class="section-heading">about st.patricks day</h2>
+                    <div class="row block">
+                        <div class="col-12 col-md-6">
+                            <p class="section-text">
+                                Today's
+                                <a class="about-link" href="https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day">Saint Patrick's Day</a>
+                                celebrations have been greatly influenced by those that developed among the Irish diaspora, especially in North America. Until the late 20th century, Saint Patrick's Day was often a bigger celebration among the diaspora than it was in Ireland.
+                                <br><br>
+                                Celebrations generally involve public parades and festivals, Irish traditional music sessions (céilithe), and the wearing of green attire or shamrocks. There are also formal gatherings such as banquets and dances, although these were more common in the past.
+
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="paddy_img">
+                                <img src="img/party.jpg">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
         </section>
-   <!---------Footer----------->
-     <footer id="footer">
-       <ul>
-         <li class="sm-icon"> 
-           <a href="https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day" target="_blank">
-             <i class="fab fa-wikipedia-w" aria-hidden="true"></i>
-           </a>
-         </li>
-        <li class="sm-icon">             
-           <a href="https://www.facebook.com/Saint.Patricks" target="_blank">
-             <i class="fab fa-facebook-f" aria-hidden="true"></i>
-           </a>
-         </li>
-         <li class="sm-icon"> 
-           <a href="https://www.instagram.com/explore/locations/217341622/saint-patricks-cathedral-dublin/" target="_blank">
-             <i class="fab fa-instagram" aria-hidden="true"></i>
-           </a>
-         </li>
-      </ul>
-     </footer>  
-   
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <!---------Footer----------->
+        <footer id="footer">
+            <ul>
+                <li class="sm-icon">
+                    <a href="https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day" target="_blank">
+                        <i class="fab fa-wikipedia-w" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="sm-icon">
+                    <a href="https://www.facebook.com/Saint.Patricks" target="_blank">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="sm-icon">
+                    <a href="https://www.instagram.com/explore/locations/217341622/saint-patricks-cathedral-dublin/" target="_blank">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
 
-<script src="nav_script.js"></script>   
-</body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="nav_script.js"></script>
+    </body>
 </html>

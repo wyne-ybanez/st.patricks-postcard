@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Roboto&display=swap');
+
+html {
+    height: 117vh;
+}
+
+body{
+    background-size: cover;
+    background-position: 0%;
+    background-attachment: fixed;
+    max-width: 100%;
+    margin: 0;   
+    padding: 0;
+}
+.postCard-1 {
+    background-image: url('./images/card-1.jpg')
+}
+.postCard-2 {
+    background-image: url('./images/card-2.jpg')
+}
+.postCard-3 {
+    background-image: url('./images/card-3.jpg')
+}
+.postCard-4 {
+    background-image: url('./images/card-4.jpg')
+}
+.postCard-5 {
+    background-image: url('./images/card-5.jpg')
+}
+.postCard-6 {
+    background-image: url('./images/card-6.jpg')
+}
+.btns {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.post-card{
+    width: 500px;
+    height: 680px;
+    background-color: #fafafa;
+    opacity: 0.8;
+    transform:translate(-50%, -50%);
+    position:absolute;
+    padding:12px;
+    left:50%;
+    top:58%;
+    border-radius: 2%;
+}
+.contactForm {
+    background: #000000;
+    padding: 15px;
+    opacity: 0.7;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    width: 430px;
+}
+.contactForm .inputBox {
+    width: 290px;
+}
+.contactForm .submit {
+    margin-top: 10px;  
+    color: #fafafa;
+}
+.contactForm .inputBox input {
+    width: 137%;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin: 5px 0;
+    border-bottom: 3px solid #000000;
+}
+.contactForm .inputBox textarea {
+    width: 137%;
+    padding: 10px;
+    font-size: 18px;
+    margin: 5px 0;
+    border-bottom: 1px solid #000000;
+}
+.contactForm .inputBox span {
+    color: #fafafa;
+    font-size: 18px;
+    background-color: #000000;
+}
+.contactForm .submit button.btn:hover {
+    color: #000000;
+}
+.btn.btn-outline-light{
+    margin: 0 100px;
+}
+h1.post-card_title{
+  font-family: 'La Belle Aurore', cursive;
+  padding: 3px;
+  font-size: 25px;
+}
+.text-center{
+  width:calc(100%);
+  font-size:15px;
+  line-height:1.8;
+  float:left;
+  word-spacing: 3px;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+.content{
+  width:50%;
+  float:left;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+

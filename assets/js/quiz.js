@@ -2,6 +2,7 @@ const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const submitButton = document.getElementById('submit-btn')
 const questionContainerElement = document.getElementById('question-container')
+const container = document.querySelector('.container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const btns = answerButtonsElement.getElementsByClassName('btn')
@@ -149,42 +150,62 @@ function clearStatusClass(element) {
 
 // Shows Image Card based on score
 function showCard(){
+    let postCardQuote = document.getElementById('postCardQuote')
+    let Quotes = [
+        ` " Wherever you go and whatever you do, may the luck of the Irish be there with you. " `,
+        ` " May misfortune follow you the rest of your life, and never catch up. " `,
+        ` " The older the fiddle the sweeter the tune. " `,
+    ]
     if(score === 0){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Unfortunately, you didn't score any points, thank you for trying though! Here's a postcard"
         postCard.classList.add('postCard-1')
+        postCardQuote.classList.remove('hide')
     } else if(score === 1){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-1')
+        postCardQuote.classList.remove('hide')
     } else if(score === 2){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-2')
+        postCardQuote.classList.remove('hide')
     } else if(score === 3){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-3')
+        postCardQuote.classList.remove('hide')
     } else if(score === 4){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-4')
+        postCardQuote.classList.remove('hide')
     } else if(score === 5){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-5')
+        postCardQuote.classList.remove('hide')
     } else {
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-6')
+        postCardQuote.classList.remove('hide')
     }
+
+    //Reveal Quote
+    for(i=0;i<Quotes.length;i++){
+        postCardQuote.innerText = Quotes[i]
+    }
+    // postCardQuote.classList.remove('hide')
+    container.classList.add('hide')
 }
 
 // When user submits - page expands & shows postcard

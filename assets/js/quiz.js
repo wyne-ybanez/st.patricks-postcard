@@ -18,9 +18,11 @@ nextButton.addEventListener('click', () => {
   setNextQuestion()
 })
 
-// Reset score when game starts
+// Reset score when game starts and PostCard
 startButton.addEventListener('click',()=>{
     scoreCounter.innerText = null
+    localStorage.clear()
+    resetPostCard()
 })
 
 // Hiding uneccessary buttons
@@ -73,13 +75,13 @@ function showQuestion(question) {
       button.addEventListener('click',()=>{
         if (button.dataset.correct){
             heading.innerText = "Well Done!"
-            score++
-            document.getElementById('scoreCounter').innerText = `Score: ${score}` 
+            score ++
             console.log(score)
+            scoreCounter.innerText = `Score: ${score}` 
+            button.classList.add('clicked')
         }
       })
     } 
-
     // If wrong answer is clicked - change heading
     if (answer.wrong) {
       button.dataset.wrong = answer.wrong
@@ -135,6 +137,7 @@ function setStatusClass(element, correct) {
   // Count Correct Answers and add style
   if (correct) {
     element.classList.add('correct')
+    element.classList.add('clicked')
   } else {
     element.classList.add('wrong')
   }
@@ -146,7 +149,7 @@ function clearStatusClass(element) {
 }
 
 // Shows Image Card based on score
-function showCard(scoreCounter){
+function showCard(){
     if(score == 0){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
@@ -157,12 +160,12 @@ function showCard(scoreCounter){
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-1')
-    } else if(score== 2){
+    } else if(score == 2){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
         postCard.classList.add('postCard-2')
-    } else if(score == 3){Heading
+    } else if(score == 3){
         postCard.classList.remove('hide')
         postCardHeading.classList.remove('hide')
         postCardHeading.innerText = "Thank you for playing! Here's your postcard"
@@ -188,6 +191,11 @@ function showCard(scoreCounter){
 // When user submits - page expands & shows postcard
 submitButton.addEventListener('click',showCard)
 
+// Reset PostCards
+function resetPostCard(){
+    postCard.classList.add('hide')
+    postCardHeading.classList.add('hide')
+}
 
 // Questions
 const questions = [

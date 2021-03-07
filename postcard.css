@@ -110,4 +110,39 @@ h1.post-card_title{
   padding: 20px;
   font-family: 'Roboto', sans-serif;
 }
-
+@media screen and (max-width: 800px) {
+.post-card{
+    width: 380px;
+    height: 640px;
+    margin: 5px;
+    top:50%;
+}
+.contactForm {
+    width: 320px;
+    position: relative;
+    margin: 0;
+}
+.contactForm .inputBox {
+    width: 290px;
+}
+.contactForm .submit {
+    margin-top: 10px;  
+    color: #fafafa;
+}
+.contactForm .inputBox input {
+    width: 100%;
+    padding: 5px;
+}
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px;
+}
+.btn.btn-outline-light{
+    margin: 0 50px;
+}
+}
+@media screen and (max-width: 1366px) {
+.post-card{
+    top:50%;
+}  
+}

@@ -21,13 +21,10 @@
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(0,154,68, 0.9);
+    background-color: rgba(229,99,23, 0.9);
     z-index: 2;
 }
 
-.paddy_menu {
-    background-color: orange;
-}
 
 .header-body {
     position: relative;
@@ -47,7 +44,7 @@
     flex: 0 0 65px;
     border-radius: 50%;
     overflow: hidden;
-    margin-left: 20rem;
+    margin-left: 230px;
     position: relative;
     z-index: 3;
 }
@@ -80,7 +77,7 @@
 }
 
 .menu-item a:hover{
-    color: #E56317;
+    color: #09B022;
     transition: all 0.3s ease-in-out;
 
 }
@@ -104,6 +101,7 @@
         width: 30px;
         height: 20px;
         z-index: 3;
+        cursor: pointer;
     }
 
     .burger span {
@@ -154,7 +152,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,154,68, 1);
+        background-color: rgba(229,99,23, 1);
         padding: 70px 10px 20px 10px;
         transition: all 0.3s ease 0s;
     }
@@ -203,7 +201,7 @@ input[type=checkbox]:focus {
   position: relative;
   margin: 0;
   border: 2px solid #fff;
-  background: #E56317;
+  background: rgb(150, 146, 146);
   transition: all 0.2s ease;
   z-index: 3;
 }
@@ -236,19 +234,93 @@ input[type=checkbox]:focus {
     font-weight: 600;
     text-align: center;
     color:#E56317;
+    text-transform: uppercase;
 }
 
 .block {
-    margin-top: 40px;
+    margin: 40px 0;
+
 }
 
-.paddy_gif {
-    width: 100%;
-    height: 100%;
-    margin-left: 50px;
+.about-link{
+    text-decoration: none;
+    color: #E56317;
+}
+
+.about-link:hover {
+    color: #E56317;
+    font-weight: 600;
 }
 
 
+.paddy_img img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width:767px) {
+    .block {
+    margin: 10px 0;
+}
+
+}
+
+/*---------Footer-----------*/
+#footer{
+    display: block;
+    height: 70px;
+    width:100%;
+    background-color: rgba(229,99,23, 1);
+   
+}
+#footer ul{
+    display: flex;
+    justify-content: center;
+    
+    padding-top: 5px;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.sm-icon {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 3rem;
+    text-decoration: none;
+    color: #f9f8f6;
+}
+
+.sm-icon a {
+    color: #fff;
+    font-size: 1.7rem;
+    border-radius: 50%;
+    border: solid #fff;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    display: inline-block;
+
+}   
+.sm-icon a:hover,
+.sm-icon a:focus {
+    background-color: #fff;
+    color: #09B022;
+    transition: all 0.2s ease-in;
+}
+
+
+/*---------Media Footer -----------*/
+@media screen and (max-width: 300px){
+#footer ul li{
+    font-size: 25px;
+}
+#footer ul{
+text-align: center;
+padding-left: 0px;
+padding-top: 10px;
+
+}
+}
 
 /*Toggle color*/
 .paddy_green {

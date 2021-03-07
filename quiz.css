@@ -8,16 +8,18 @@
 #heading {
     text-align: center;
     justify-content: center;
+    text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 #score, #postCard-Heading, #postCardQuote {
     text-align: center;
     justify-content: center;
     align-items: center;
+    text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 #postCard-Heading {
-    padding: 2rem 10rem;
+    padding: 6rem 10rem 2rem 10rem;
 }
 
 body {
@@ -26,7 +28,7 @@ body {
   margin: 0;
   display: flex;
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -72,8 +74,9 @@ body {
 
 .cta-btn {
     background-color: green;
-    margin: 0 3rem;
+    margin: 0 3rem 3rem 3rem;
     padding: 5px 30px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover {
@@ -104,8 +107,12 @@ body {
   display: none;
 }
 
-.postCard-1 {
-    background-image: url('images/card-1.jpg');
+.postCard-1,
+.postCard-2,
+.postCard-3,
+.postCard-4,
+.postCard-5,
+.postCard-6 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -117,71 +124,25 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 40%);
+}
+.postCard-1 {
+    background-image: url('images/card-1.jpg');
 }
 .postCard-2 {
     background-image: url('images/card-2.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 550px; 
-    width: 720px;
-    transition: ease-in;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
 }
 .postCard-3 {
     background-image: url('images/card-3.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 550px; 
-    width: 720px;
-    transition: ease-in;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
 }
 .postCard-4 {
     background-image: url('images/card-4.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 550px; 
-    width: 720px;
-    transition: ease-in;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
 }
 .postCard-5 {
     background-image: url('images/card-5.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 550px; 
-    width: 720px;
-    transition: ease-in;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
 }
 .postCard-6 {
     background-image: url('images/card-6.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 550px; 
-    width: 720px;
-    transition: ease-in;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
 }
 
 /* Background Styles Only */
@@ -193,7 +154,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DFDFDF;
+    background-color: white;
     overflow-x: hidden;
 }
 

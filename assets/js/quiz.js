@@ -10,6 +10,7 @@ const heading = document.getElementById('heading')
 const scoreCounter = document.getElementById('scoreCounter')
 const postCardHeading = document.getElementById('postCard-Heading')
 
+
 let shuffledQuestions, currentQuestionIndex
 
 // Starts Game when clicking
@@ -199,13 +200,11 @@ function showCard(){
         postCard.classList.add('postCard-6')
         postCardQuote.classList.remove('hide')
     }
-
     //Reveal Quote
     let random = Math.floor(Math.random() * Quotes.length)
     postCardQuote.innerText = Quotes[random]
-    // postCardQuote.classList.remove('hide')
     container.classList.add('hide')
-}
+}   
 
 // When user submits - page expands & shows postcard
 submitButton.addEventListener('click',showCard)

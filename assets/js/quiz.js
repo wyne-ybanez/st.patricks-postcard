@@ -201,9 +201,8 @@ function showCard(){
     }
 
     //Reveal Quote
-    for(i=0;i<Quotes.length;i++){
-        postCardQuote.innerText = Quotes[i]
-    }
+    let random = Math.floor(Math.random() * Quotes.length)
+    postCardQuote.innerText = Quotes[random]
     // postCardQuote.classList.remove('hide')
     container.classList.add('hide')
 }

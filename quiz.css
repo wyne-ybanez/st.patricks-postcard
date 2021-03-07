@@ -44,6 +44,17 @@ body {
   align-items: center;
 }
 
+.cta {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cta-btn:hover {
+    background-color: darkgreen;
+}
+
 .btn-grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -57,6 +68,12 @@ body {
   color: white;
   outline: none;
   font-size: 25px;
+}
+
+.cta-btn {
+    background-color: green;
+    margin: 0 3rem;
+    padding: 5px 30px;
 }
 
 .btn:hover {

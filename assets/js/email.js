@@ -33,14 +33,6 @@ function sendMail() {
 }
 
 // Reset Button 
-function reset(){
-  let inputs = [
-    document.getElementById('Name'),
-    document.getElementById('Email'),
-    document.getElementById('Message'),
-   ]
-
-  for(i=0;i<inputs.length;i++){
-    inputs[i].value='';
-  }
+function myFunction() {
+  document.getElementById("contact-form").reset()
 }

@@ -59,6 +59,7 @@ body{
 }
 .contactForm .inputBox {
     width: 298px;
+    border-radius: 10px;
 }
 .contactForm .submit {
     margin-top: 10px;  
@@ -71,6 +72,7 @@ body{
     font-size: 18px;
     margin: 5px 0;
     border-bottom: 3px solid #000000;
+    border-radius: 10px;
 }
 .contactForm .inputBox textarea {
     width: 137%;

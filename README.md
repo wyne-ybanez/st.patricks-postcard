@@ -41,9 +41,18 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 7. [JavaScript](https://www.javascript.com/) has been used to be able to display and add the following functionality: Google Maps, email service in contact page, slide show in gallery page.
 
-10. [EmailJS](https://www.emailjs.com/) Has been used to be able to receive an email from the User to the developer with a request/message by filling the form in  the contact page.
+10. [EmailJS](https://www.emailjs.com/) Has been used to be able to receive an email from the User to the developer with a request/message by filling the form in  the contact page.  
+
+## **_Automated testing_**
+
+* HTML pages tested with [W3C HTML Validator](https://validator.w3.org/#validate_by_input).  No errors
+
+* CSS file has been tested with [W3C CSS validator](https://jigsaw.w3.org/css-validator/). No errors.
+
+* JavaScript files has been tested with [Jshint](https://jshint.com/). No errors.
 
 
-To run project in Gitpod - type into terminal: 
+## **_Credit_**
 
-`python3 -m http.server`
+We would like to thank [Code Institute](https://codeinstitute.net/) for the opportunity to participate to this Hackaton. Also a special thank to everyone involved in the creation of this project.
+

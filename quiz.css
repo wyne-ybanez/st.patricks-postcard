@@ -9,6 +9,8 @@
     text-align: center;
     justify-content: center;
     text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+    margin-top: 10rem;
+    margin-bottom: 3rem;
 }
 
 #score, #postCard-Heading, #postCardQuote {
@@ -108,7 +110,7 @@ body {
 }
 
 .postCard {
-    margin-top: 3rem;
+    margin-top: 10rem;
 }
 
 .postCard-1,

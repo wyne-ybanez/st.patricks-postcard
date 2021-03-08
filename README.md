@@ -51,6 +51,9 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 * JavaScript files has been tested with [Jshint](https://jshint.com/). No errors.
 
+## **_Known Bugs_**
+
+* There is a bug where the user can press on the correct answer multiple times and the score increases by 1. We are still attempting to find a solution for this bug.
 
 ## **_Credit_**
 

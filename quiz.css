@@ -170,7 +170,7 @@ html {
     }
 
     #heading {
-        margin-top: 8rem;
+        margin-top: 20rem;
         padding: 0 2rem;
     }
 
@@ -184,7 +184,9 @@ html {
         margin-top: 2rem;
     }
 
-    #postCard-Heading {
-        padding: 6rem 7rem 2rem 10rem
+     #postCard-Heading {
+        padding: 6rem 14rem 2rem 14rem;
+        margin-top: 18rem;
     }
+
 }

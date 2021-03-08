@@ -177,4 +177,14 @@ html {
         flex-direction: column;
         margin-top: 2rem;
     }
+
+    .postCard-1,
+    .postCard-2,
+    .postCard-3,
+    .postCard-4,
+    .postCard-5,
+    .postCard-6 {
+        height: 550px; 
+        width: 620px;
+    }
 }

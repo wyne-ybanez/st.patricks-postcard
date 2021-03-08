@@ -204,6 +204,7 @@ function showCard(){
     let random = Math.floor(Math.random() * Quotes.length)
     postCardQuote.innerText = Quotes[random]
     container.classList.add('hide')
+    heading.classList.add('hide')
 }   
 
 // When user submits - page expands & shows postcard

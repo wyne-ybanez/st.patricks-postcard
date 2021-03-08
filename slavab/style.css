@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700 &family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
 
 * {
     margin: 0;
@@ -75,7 +75,7 @@
     color: white;
     font-size: 18px;
     font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .menu-item a:hover {
@@ -232,7 +232,7 @@ input[type=checkbox]:focus {
 
 .section-heading {
 
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
     text-align: center;
     color: #E56317;
@@ -265,7 +265,7 @@ input[type=checkbox]:focus {
     text-align: center;
     margin: 90px 40px 10px;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 35px;
 }
@@ -275,7 +275,7 @@ input[type=checkbox]:focus {
     margin: 10px 40px 40px;
     color: black !important;
     background-color: rgba(252, 252, 252, 0) !important;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
 
 }
@@ -310,7 +310,7 @@ hr {
     border: none;
     text-transform: uppercase;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
 }
 
@@ -325,58 +325,13 @@ hr {
 
 /*---------Media landing page-----------*/
 
-@media only screen and (max-width: 768px) and (max-width:924px) {
-    
-    .hero {
-        padding-top: 60px;
-    }
-
-    .mute {
-        margin: 20px;
-        font-size: 17px;
-    }
-
-    .half-white {
-        height: 40%;
-        width: 100%;
-        background-color: rgba(252, 249, 249, 0.9);
-        top: 396px;
-        position: absolute;
-        clear: both;
-        overflow: hidden;
-    }
-
-    .text-image {
-        text-align: center;
-        margin: 25px;
-        font-size: 30px;
-        font-weight: 700;
-
-    }
-
-    hr {
-        margin: 10px auto;
-    }
-
-    #main-image {
-        height: 100vh;
-        background-position: top center;
-    }
-    .btn {
-        margin: 20px auto;
-        line-height: 2;
-        font-size: 18px;
-
-    }
-}
-
 @media only screen and (min-width:768px) and (max-width:1024px)   {
     
     .half-white {
         max-height: 50%;
         width: 100%;
         background-color: rgba(252, 249, 249, 0.9);
-        top: 8rem;
+        top: 26rem;
         position: absolute;
         clear: both;
     }
@@ -407,12 +362,14 @@ hr {
 }
 
 @media only screen and (min-width:600px) and (max-width:767px)   {
-    
+    .hero {
+        padding-top: 60px;
+    }
     .half-white {
         max-height: 50%;
         width: 100%;
         background-color: rgba(252, 249, 249, 0.9);
-        top: 412px;
+        top: 26rem;
         position: absolute;
         clear: both;
     }
@@ -442,12 +399,14 @@ hr {
 }
 
 @media only screen and (max-width:600px) {
-    
+    .hero {
+        padding-top: 60px;
+    }
     .half-white {
         max-height: 40%;
         width: 100%;
         background-color: rgba(252, 249, 249, 0.9);
-        top: 412px;
+        top: 26rem;
         position: absolute;
         clear: both;
     }
@@ -492,7 +451,7 @@ hr {
     color: #E56317;
     text-align: center;
     margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     z-index: 2;
 }
 

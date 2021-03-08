@@ -35,7 +35,7 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 0 -35px;
+    margin: 0 -70px;
 }
 .post-card{
     width: 500px;
@@ -142,7 +142,7 @@ h1.post-card_title{
     padding: 5px;
 }
 .btn.btn-outline-light{
-    margin: 0 50px;
+    margin: 0 85px;
 }
 }
 @media screen and (max-width: 1366px) {

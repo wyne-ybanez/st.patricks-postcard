@@ -376,7 +376,7 @@ hr {
         max-height: 50%;
         width: 100%;
         background-color: rgba(252, 249, 249, 0.9);
-        top: 409px;
+        top: 412px;
         position: absolute;
         clear: both;
     }
@@ -412,7 +412,7 @@ hr {
         max-height: 50%;
         width: 100%;
         background-color: rgba(252, 249, 249, 0.9);
-        top: 409px;
+        top: 412px;
         position: absolute;
         clear: both;
     }
@@ -429,7 +429,6 @@ hr {
         font-weight: 700;
     }
 
-
     #main-image {
         height: 100vh;
         overflow-x: hidden;
@@ -438,8 +437,6 @@ hr {
         margin: 10px auto;
         line-height: 1;
         font-size: 15px;
-        
-
     }
 
 }
@@ -450,7 +447,7 @@ hr {
         max-height: 40%;
         width: 100%;
         background-color: rgba(252, 249, 249, 0.9);
-        top: 404px;
+        top: 412px;
         position: absolute;
         clear: both;
     }
@@ -476,11 +473,29 @@ hr {
         margin: 10px auto;
         line-height: 1;
         font-size: 15px;
-        
 
     }
 
 }
+
+/*Timer*/
+.timer {
+    padding-top: 2rem;
+}
+
+.green.section-heading {
+    color: rgba(0, 154, 68, 1);
+}
+
+#countdown {
+    font-size: 30px;
+    color: #E56317;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 2;
+}
+
 
 /*About section*/
 
@@ -578,15 +593,19 @@ hr {
 
 
 /*Toggle color*/
+
 .paddy_green {
     background-color: rgba(0, 154, 68, 1);
     color: #fff;
-    transition: all 0.2s ease;
 
 }
 
 .paddy_green h1 {
     color: black;
+}
+
+.paddy_green.green {
+    color: #fff;
 }
 
 .paddy_green .btn {

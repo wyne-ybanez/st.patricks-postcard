@@ -16,7 +16,7 @@
         <link
         rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
         <!-- Stylesheet -->
-        <link href="nav_style.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
         <title>St. Patricks Day Post Card</title>
     </head>
     <body>
@@ -27,7 +27,7 @@
                     <div class="pmode-btn">
                         <input type="checkbox" class="toggle" onclick="paddyLight()" id="checkBox">
                     </div>
-                    <a class="logo" href="nav_index.html">
+                    <a class="logo" href="index.html">
                         <img src="img/shamrock-logo.jpg" alt="logo">
                     </a>
                     <div class="burger">
@@ -39,10 +39,10 @@
                                 <a href="#">Home</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#">About</a>
+                                <a href="#about_sec">About</a>
                             </li>
                             <li class="menu-item">
-                                <a href="#">Quiz</a>
+                                <a href="quizz.html">Quiz</a>
                             </li>
 
                         </ul>
@@ -56,32 +56,43 @@
 
             <section id="main-image">
                 <div class="half-white">
-                    <h1 class="text-image">Did you know that Saint Patrick is one the biggest Parties celebrated around the world?
-                        </h1>
-                        <hr>
-                    <p class="mute">That was easy! <br> But how much do you really know about this big celebration?<br>
-                        try your knowledge  and gain a nice postal!
+                    <h1 class="text-image">Welcome to the Saint Patrick's quiz page!
+                    </h1>
+                    <hr>
+                    <p class="mute">Take our quiz and find out how familiar you are with the Saint Patrick's Day traditions!
+                        <br>
+                        Try your knowledge and gain a nice postal!
                     </p>
-                    <a href="#" role="button" class="btn">Quiz</a>
-                    
+                    <a href="quizz.html" role="button" class="btn">Quiz</a>
+
                 </div>
-                <!--------- End landing page----------->
 
             </section>
         </div>
+
+        <!--------- Timer---------->
+        <div class="timer">
+            <h2 class="green section-heading">Days until the saint Patrick's Day:</h2>
+            <h3 class="section-heading" id="countdown"></h3>
+
+        </div>
+        <!--------- About section---------->
         <section id="about_sec">
             <div class="container">
                 <div class="about">
-                    <h2 class="section-heading">about st.patricks day</h2>
+                    <h2 class="section-heading">about Saint Patrick's day</h2>
                     <div class="row block">
                         <div class="col-12 col-md-6">
                             <p class="section-text">
-                                Today's
+                                Did you know that
                                 <a class="about-link" href="https://en.wikipedia.org/wiki/Saint_Patrick%27s_Day">Saint Patrick's Day</a>
-                                celebrations have been greatly influenced by those that developed among the Irish diaspora, especially in North America. Until the late 20th century, Saint Patrick's Day was often a bigger celebration among the diaspora than it was in Ireland.
-                                <br><br>
+                                is one the biggest Parties celebrated around the world?<br><br>
                                 Celebrations generally involve public parades and festivals, Irish traditional music sessions (céilithe), and the wearing of green attire or shamrocks. There are also formal gatherings such as banquets and dances, although these were more common in the past.
+                                <br><br>
 
+                                That was easy!
+                                <br>
+                                But how much do you really know about this big celebration?<br>
                             </p>
                         </div>
                         <div class="col-12 col-md-6">
@@ -120,6 +131,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-        <script src="nav_script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>

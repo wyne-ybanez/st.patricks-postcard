@@ -107,6 +107,10 @@ body {
   display: none;
 }
 
+.postCard {
+    margin-top: 3rem;
+}
+
 .postCard-1,
 .postCard-2,
 .postCard-3,

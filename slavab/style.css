@@ -242,7 +242,7 @@ input[type=checkbox]:focus {
 
 /*-------------landing Page----------------*/
 #main-image {
-    background-image: url("./img/irish.jpg");
+    background-image: url("../slavab/img/irish.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

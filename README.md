@@ -55,6 +55,8 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 * There is a bug where the user can press on the correct answer multiple times and the score increases by 1. We are still attempting to find a solution for this bug.
 
+* There is a bug when submitted the quiz, text appear but its hidden on top of the postcard. We are still fixing the bug but to lack of time, wasnt able to fix it.
+
 ## **_Credit_**
 
 We would like to thank [Code Institute](https://codeinstitute.net/) for the opportunity to participate to this Hackaton. Also a special thank to everyone involved in the creation of this project.

@@ -1,50 +1,50 @@
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const submitButton = document.getElementById('submit-btn')
-const questionContainerElement = document.getElementById('question-container')
-const container = document.querySelector('.container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
-const btns = answerButtonsElement.getElementsByClassName('btn')
-const heading = document.getElementById('heading')
-const scoreCounter = document.getElementById('scoreCounter')
-const postCardHeading = document.getElementById('postCard-Heading')
+const startButton = document.getElementById('start-btn');
+const nextButton = document.getElementById('next-btn');
+const submitButton = document.getElementById('submit-btn');
+const questionContainerElement = document.getElementById('question-container');
+const container = document.querySelector('.container');
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
+const btns = answerButtonsElement.getElementsByClassName('btn');
+const heading = document.getElementById('heading');
+const scoreCounter = document.getElementById('scoreCounter');
+const postCardHeading = document.getElementById('postCard-Heading');
 
 
-let shuffledQuestions, currentQuestionIndex
+let shuffledQuestions, currentQuestionIndex;
 
 // Starts Game when clicking
-startButton.addEventListener('click', startGame)
+startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
-  currentQuestionIndex++
-  setNextQuestion()
-})
+  currentQuestionIndex++;
+  setNextQuestion();
+});
 
 // Hiding uneccessary buttons
 function startGame() {
-  startButton.classList.add('hide')
-  submitButton.classList.add('hide')
-  answerButtonsElement.classList.remove('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
-  currentQuestionIndex = 0
-  score = 0
-  scoreCounter.innerText = null
-  console.clear()
-  questionContainerElement.classList.remove('hide')
-  heading.innerText = "Welcome to our St.Patrick's themed quiz"
-  setNextQuestion()
+  startButton.classList.add('hide');
+  submitButton.classList.add('hide');
+  answerButtonsElement.classList.remove('hide');
+  shuffledQuestions = questions.sort(() => Math.random() - .5);
+  currentQuestionIndex = 0;
+  score = 0;
+  scoreCounter.innerText = null;
+  console.clear();
+  questionContainerElement.classList.remove('hide');
+  heading.innerText = "Welcome to our St.Patrick's themed quiz";
+  setNextQuestion();
 
   if (!postCard.classList.contains('hide')){
       // Reset game
-    resetPostCard()
+    resetPostCard();
   }
 }
 
 // Next Question
 function setNextQuestion() {
-  resetState()
-  showQuestion(shuffledQuestions[currentQuestionIndex])
-  resetHeading()
+  resetState();
+  showQuestion(shuffledQuestions[currentQuestionIndex]);
+  resetHeading();
 }
 
 // Changes heading randomly - for a more fun experience
@@ -53,168 +53,167 @@ function resetHeading() {
                         "You got this one in the bag!",
                         "Easy work, you got this!",
                         "A guess is better than giving no answer",
-                        "It might be tempting to Google the answer..."]
+                        "It might be tempting to Google the answer..."];
 
-    let random = Math.floor(Math.random() * headingOptions.length)
-    heading.innerText = headingOptions[random]
+    let random = Math.floor(Math.random() * headingOptions.length);
+    heading.innerText = headingOptions[random];
 }
 
 // Shows next question
 function showQuestion(question) {
-  questionElement.innerText = question.question
+  questionElement.innerText = question.question;
   question.answers.forEach(answer => {
 
     // Create button for each answer
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('btn')
+    const button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('btn');
 
     // If answer is correct, meaning true - set dataset to value 'true' 
     // If value is 'true' - Increase score by 1
     if (answer.correct) {
-      button.dataset.correct = answer.correct
+      button.dataset.correct = answer.correct;
       button.addEventListener('click',()=>{
         if (button.dataset.correct){
-            heading.innerText = "Well Done!"
-            score ++
-            console.log(score)
-            scoreCounter.innerText = `Score: ${score}` 
-            button.classList.add('clicked')
+            heading.innerText = "Well Done!";
+            score ++;
+            console.log(score);
+            scoreCounter.innerText = `Score: ${score}` ;
+            button.classList.add('clicked');
         }
-      })
+      });
     } 
     // If wrong answer is clicked - change heading
     if (answer.wrong) {
-      button.dataset.wrong = answer.wrong
+      button.dataset.wrong = answer.wrong;
       button.addEventListener('click',()=>{
         if (button.dataset.wrong){
-            heading.innerText = "Wrong!"
+            heading.innerText = "Wrong!";
         }
-      })
+      });
     } 
-    button.addEventListener('click', selectAnswer)
-    answerButtonsElement.appendChild(button)
-  })
-}
+    button.addEventListener('click', selectAnswer);
+    answerButtonsElement.appendChild(button);
+});
 
 // Reset when next question is asked
 function resetState() {
-  nextButton.classList.add('hide')
-  submitButton.classList.add('hide')
+  nextButton.classList.add('hide');
+  submitButton.classList.add('hide');
   while (answerButtonsElement.firstChild) {
-    answerButtonsElement.removeChild(answerButtonsElement.firstChild)
+    answerButtonsElement.removeChild(answerButtonsElement.firstChild);
   }
 }
 
 // Allows user to choose an answer
 function selectAnswer(e) {
-  const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
-  const wrong = selectedButton.dataset.wrong
+  const selectedButton = e.target;
+  const correct = selectedButton.dataset.correct;
+  const wrong = selectedButton.dataset.wrong;
 
   // Show correct answer
   Array.from(answerButtonsElement.children).forEach(button => {
-    setStatusClass(button, button.dataset.correct)
-  })
+    setStatusClass(button, button.dataset.correct);
+  });
   
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide')
+    nextButton.classList.remove('hide');
   } else {
-    heading.innerText = "Congratulations, you've finished the game!"
+    heading.innerText = "Congratulations, you've finished the game!";
 
     // This should allow user to submit their results
-    submitButton.innerText = 'Submit'
-    submitButton.classList.remove('hide')
+    submitButton.innerText = 'Submit';
+    submitButton.classList.remove('hide');
 
     // Restart Game
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')  
+    startButton.innerText = 'Restart';
+    startButton.classList.remove('hide')  ;
   }
 }
 
 function setStatusClass(element, correct) {
-  clearStatusClass(element)
+  clearStatusClass(element);
 
   // Count Correct Answers and add style
   if (correct) {
-    element.classList.add('correct')
-    element.classList.add('clicked')
+    element.classList.add('correct');
+    element.classList.add('clicked');
   } else {
-    element.classList.add('wrong')
+    element.classList.add('wrong');
   }
 }
 
 function clearStatusClass(element) {
-  element.classList.remove('correct')
-  element.classList.remove('wrong')
+  element.classList.remove('correct');
+  element.classList.remove('wrong');
 }
 
 // Shows Image Card based on score
 function showCard(){
-    let postCardQuote = document.getElementById('postCardQuote')
+    let postCardQuote = document.getElementById('postCardQuote');
     let Quotes = [
         ` " Wherever you go and whatever you do, may the luck of the Irish be there with you. " `,
         ` " May misfortune follow you the rest of your life, and never catch up. " `,
         ` " The older the fiddle the sweeter the tune. " `,
-    ]
+    ];
     if(score === 0){
-        postCard.classList.remove('hide')
-        postCardHeading.classList.remove('hide')
-        postCardHeading.innerText = "Unfortunately, you didn't score any points, thank you for trying though! Here's a postcard"
-        postCard.classList.add('postCard-1')
-        postCardQuote.classList.remove('hide')
+        postCard.classList.remove('hide');
+        postCardHeading.classList.remove('hide');
+        postCardHeading.innerText = "Unfortunately, you didn't score any points, thank you for trying though! Here's a postcard";
+        postCard.classList.add('postCard-1');
+        postCardQuote.classList.remove('hide');
     } else if(score === 1){
-        postCard.classList.remove('hide')
-        postCardHeading.classList.remove('hide')
-        postCardHeading.innerText = "Thank you for playing! Here's your postcard"
-        postCard.classList.add('postCard-1')
-        postCardQuote.classList.remove('hide')
+        postCard.classList.remove('hide');
+        postCardHeading.classList.remove('hide');
+        postCardHeading.innerText = "Thank you for playing! Here's your postcard";
+        postCard.classList.add('postCard-1');
+        postCardQuote.classList.remove('hide');
     } else if(score === 2){
-        postCard.classList.remove('hide')
-        postCardHeading.classList.remove('hide')
-        postCardHeading.innerText = "Thank you for playing! Here's your postcard"
-        postCard.classList.add('postCard-2')
-        postCardQuote.classList.remove('hide')
+        postCard.classList.remove('hide');
+        postCardHeading.classList.remove('hide');
+        postCardHeading.innerText = "Thank you for playing! Here's your postcard";
+        postCard.classList.add('postCard-2');
+        postCardQuote.classList.remove('hide');
     } else if(score === 3){
-        postCard.classList.remove('hide')
-        postCardHeading.classList.remove('hide')
-        postCardHeading.innerText = "Thank you for playing! Here's your postcard"
-        postCard.classList.add('postCard-3')
-        postCardQuote.classList.remove('hide')
+        postCard.classList.remove('hide');
+        postCardHeading.classList.remove('hide');
+        postCardHeading.innerText = "Thank you for playing! Here's your postcard";
+        postCard.classList.add('postCard-3');
+        postCardQuote.classList.remove('hide');
     } else if(score === 4){
-        postCard.classList.remove('hide')
-        postCardHeading.classList.remove('hide')
-        postCardHeading.innerText = "Thank you for playing! Here's your postcard"
-        postCard.classList.add('postCard-4')
-        postCardQuote.classList.remove('hide')
+        postCard.classList.remove('hide');
+        postCardHeading.classList.remove('hide');
+        postCardHeading.innerText = "Thank you for playing! Here's your postcard";
+        postCard.classList.add('postCard-4');
+        postCardQuote.classList.remove('hide');
     } else if(score === 5){
-        postCard.classList.remove('hide')
-        postCardHeading.classList.remove('hide')
-        postCardHeading.innerText = "Thank you for playing! Here's your postcard"
-        postCard.classList.add('postCard-5')
-        postCardQuote.classList.remove('hide')
+        postCard.classList.remove('hide');
+        postCardHeading.classList.remove('hide');
+        postCardHeading.innerText = "Thank you for playing! Here's your postcard";
+        postCard.classList.add('postCard-5');
+        postCardQuote.classList.remove('hide');
     } else {
-        postCard.classList.remove('hide')
-        postCardHeading.classList.remove('hide')
-        postCardHeading.innerText = "Thank you for playing! Here's your postcard"
-        postCard.classList.add('postCard-6')
-        postCardQuote.classList.remove('hide')
+        postCard.classList.remove('hide');
+        postCardHeading.classList.remove('hide');
+        postCardHeading.innerText = "Thank you for playing! Here's your postcard";
+        postCard.classList.add('postCard-6');
+        postCardQuote.classList.remove('hide');
     }
     //Reveal Quote
-    let random = Math.floor(Math.random() * Quotes.length)
-    postCardQuote.innerText = Quotes[random]
-    container.classList.add('hide')
+    let random = Math.floor(Math.random() * Quotes.length);
+    postCardQuote.innerText = Quotes[random];
+    container.classList.add('hide');
 }   
 
 // When user submits - page expands & shows postcard
-submitButton.addEventListener('click',showCard)
+submitButton.addEventListener('click',showCard);
 
 // Reset PostCards
 function resetPostCard(){
-    postCard.classList.add('hide')
-    postCardHeading.classList.add('hide')
-    localStorage.clear()
-    alert("Restarting...")
+    postCard.classList.add('hide');
+    postCardHeading.classList.add('hide');
+    localStorage.clear();
+    alert("Restarting...");
 }
 
 // Questions
@@ -273,5 +272,5 @@ const questions = [
       { text: 'Nobleman', correct: true, wrong: false }
     ]
   }
-]
-
+];
+}

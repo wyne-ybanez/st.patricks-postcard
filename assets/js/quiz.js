@@ -151,6 +151,7 @@ function clearStatusClass(element) {
 
 // Shows Image Card based on score
 function showCard(){
+    heading.classList.add('hide')
     let postCardQuote = document.getElementById('postCardQuote')
     let Quotes = [
         ` " Wherever you go and whatever you do, may the luck of the Irish be there with you. " `,
@@ -204,7 +205,6 @@ function showCard(){
     let random = Math.floor(Math.random() * Quotes.length)
     postCardQuote.innerText = Quotes[random]
     container.classList.add('hide')
-    heading.classList.add('hide')
 }   
 
 // When user submits - page expands & shows postcard

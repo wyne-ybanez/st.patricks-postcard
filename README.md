@@ -26,6 +26,11 @@ As a User I want to be able to answer the questions and collect postcards.
 As a User I want to be able to come back and play again with the quiz.  
 As a User I want to be able to be able to play with friends and family.  
 
+## **_Team Collaboration_**
+During development, the team communicated in meetings and chat through the Slack Application. The team also incorporated an agile development processes through the use of kanban boards on Trello. After team meetings, an email summary of the discussion outlining current challenges, completed features, future implementations and work schedules.
+
+![Trello_board](images/Trello.png)
+![Trello_board2](images/Trello_board.png)
 
 ## **_Technology Used_**
 1. [HTML](https://en.wikipedia.org/wiki/HTML) has been used in this project because is the standard markup language for documents designed to be displayed in a web browser.
@@ -35,13 +40,11 @@ is a style sheet language. It is used to style markup language such as HTML.
 
 3. [Gitpod](https://gitpod.io/) has been used as an on-line IDE followed by [Github](https://github.com/) for deployment. IDE is a software application used by computer programmers for software development.
 
+4. [Bootstrap](https://getbootstrap.com/) has been used to achive mobile first design and to achive a structured layout. 
 
-5. [Bootstrap](https://getbootstrap.com/) has been used to achive mobile first design and to achive a structured layout. 
+5. [JavaScript](https://www.javascript.com/) has been used to be able to display and add the following functionality: Google Maps, email service in contact page, slide show in gallery page.
 
-
-7. [JavaScript](https://www.javascript.com/) has been used to be able to display and add the following functionality: Google Maps, email service in contact page, slide show in gallery page.
-
-10. [EmailJS](https://www.emailjs.com/) Has been used to be able to receive an email from the User to the developer with a request/message by filling the form in  the contact page.  
+6. [EmailJS](https://www.emailjs.com/) Has been used to be able to receive an email from the User to the developer with a request/message by filling the form in  the contact page.  
 
 ## **_Automated testing_**
 
